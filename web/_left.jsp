@@ -13,37 +13,37 @@
 </head>
 <body>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 餐厅管理</a>
+		<a href="Yzzlogin.jsp" target="rightFrame">› 餐厅管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 宿舍管理</a>
+		<a href="#" target="rightFrame">› 宿舍管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 学院管理</a>
+		<a href="#" target="rightFrame">› 学院管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 教师管理</a>
+		<a href="#" target="rightFrame">› 教师管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 学生管理</a>
+		<a href="#" target="rightFrame">› 学生管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 医院管理</a>
+		<a href="#" target="rightFrame">› 医院管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 社团管理</a>
+		<a href="#" target="rightFrame">› 社团管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 图书管理</a>
+		<a href="#" target="rightFrame">› 图书管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 失物管理</a>
+		<a href="#" target="rightFrame">› 失物管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 用户管理</a>
+		<a href="#" target="rightFrame">› 用户管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 考试管理</a>
+		<a href="#" target="rightFrame">› 考试管理</a>
 	</div>
 
 
