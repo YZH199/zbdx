@@ -29,7 +29,7 @@
 <script src=""></script>
 <h2>菜单管理</h2>
 <div id="add-door1">
-    <a href="#" target="rightFrame"><input type="submit" value="新增菜品"/></a>
+    <a href="Yzzcdadd.jsp" target="rightFrame"><input type="submit" value="新增菜品"/></a>
     <a>&nbsp;&nbsp;&nbsp;</a>
 </div>
 <table border="1">
@@ -51,9 +51,9 @@
             <td>${yzzcd.CD_price}</td>
             <td>${yzzcd.CD_type}</td>
             <td>
-                <a href="YzzCTdeleteServlet?id=${yzzcd.id}">删除</a>
+                <a href="YzzCDdeleteServlet?id=${yzzcd.id}">删除</a>
                 &nbsp;|&nbsp;
-                <a href="YzzCTinfoServlet?id=${yzzcd.id}">修改</a>
+                <a href="YzzCDinfoServlet?id=${yzzcd.id}">修改</a>
             </td>
         </tr>
     </c:forEach>

@@ -177,6 +177,99 @@ public class YzzuserDao {
 
         return list;
     }
+    public int id(Yzzcd yzzcd) {
+        System.out.println("获取id");
+        Connection conn = DBUtils.getConnectionByDatasource();
+        String sql="select id from yzzct where CT_name=?";
+        int a=0;
+        try {
+            PreparedStatement ps= conn.prepareStatement(sql);
+            ps.setString(1,yzzcd.getCT_name());
+            ResultSet rs=ps.executeQuery();
+            while (rs.next()){
+                a=rs.getInt("id");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(conn);
+        }
+        return a;
+    }
+    public void cdadd(Yzzcd yzzcd){
+        int a=id(yzzcd);
+        Connection conn=DBUtils.getConnectionByDatasource();
+        String sql="insert into yzzcd values(null,?,?,?,?)";
+        try {
+            PreparedStatement ps=conn.prepareStatement(sql);
+            ps.setInt(1,a);
+            ps.setString(2,yzzcd.getCD_name());
+            ps.setString(3,yzzcd.getCD_price());
+            ps.setString(4,yzzcd.getCD_type());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(conn);
+        }
+
+    }
+    public void cddelete(Integer id){
+        Connection conn = DBUtils.getConnectionByDatasource();
+        String sql="delete from yzzcd where id=?";
+        try {
+            PreparedStatement ps=conn.prepareStatement(sql);
+            ps.setInt(1,id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(conn);
+        }
+    }
+    public Yzzcd cdfingbyid(Integer id){
+        Connection conn = DBUtils.getConnectionByDatasource();
+        Yzzcd yzzcd=null;
+        String sql="select cd.id,cd.ct_id,cd.CD_name,cd.CD_price,cd.CD_type,ct.CT_name from yzzcd cd  join yzzct ct on cd.ct_id=ct.id where cd.id=?";
+        try {
+            PreparedStatement ps=conn.prepareStatement(sql);
+            ps.setInt(1,id);
+            ResultSet rs=ps.executeQuery();
+            while (rs.next()){
+                yzzcd=new Yzzcd();
+                yzzcd.setId(rs.getInt("id"));
+                yzzcd.setCt_id(rs.getInt("ct_id"));
+                yzzcd.setCD_name(rs.getString("CD_name"));
+                yzzcd.setCD_price(rs.getString("CD_price"));
+                yzzcd.setCD_type(rs.getString("CD_type"));
+                yzzcd.setCT_name(rs.getString("CT_name"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(conn);
+        }
+        return yzzcd;
+    }
+    public void cdupdate(Yzzcd yzzcd){
+        int a=id(yzzcd);
+        Connection conn = DBUtils.getConnectionByDatasource();
+        String sql="update yzzcd set ct_id=?,CD_name=?,CD_price=?,CD_type=? where id=?";
+        try {
+            PreparedStatement ps=conn.prepareStatement(sql);
+            ps.setInt(1,a);
+            ps.setString(2,yzzcd.getCD_name());
+            ps.setString(3,yzzcd.getCD_price());
+            ps.setString(4,yzzcd.getCD_type());
+            ps.setInt(5,yzzcd.getId());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(conn);
+        }
+    }
+
 
 
 

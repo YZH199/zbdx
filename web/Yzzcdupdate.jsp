@@ -5,7 +5,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>修改餐厅</title>
+    <title>修改菜单</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style type="text/css">
         body{ font-family: "微软雅黑"; background-color: #EDEDED; }
@@ -21,35 +21,35 @@
 </head>
 <body><!-- body-start  -->
 
-<h2>修改餐厅</h2>
+<h2>修改菜品</h2>
 <hr/>
-<form action="${pageContext.request.contextPath}/YzzctupdateServlet" method="POST">
-    <input type="hidden" name="id" value="${yzzct.id}"/>
+<form action="${pageContext.request.contextPath}/YzzCDupdateServlet" method="POST">
+    <input type="hidden" name="id" value="${yzzcd.id}"/>
     <table border="1">
         <tr>
             <td width="30%">餐厅名称</td>
             <td>
-                <input type="text" name="ctname" value="${yzzct.CT_name}"/>
+                <input type="text" name="ctname" value="${yzzcd.CT_name}"/>
             </td>
         </tr>
         <tr>
-            <td>联系电话</td>
+            <td>菜品名字</td>
             <td>
-                <input type="text" name="cttel"  value="${yzzct.CT_tel}"/>
+                <input type="text" name="cdname"  value="${yzzcd.CD_name}"/>
             </td>
         </tr>
         <tr>
-            <td>餐厅地址</td>
+            <td>菜品价格</td>
             <td>
-                <input type="text" name="ctaddr"
-                       value="${yzzct.CT_addr}"/>
+                <input type="text" name="cdprice"
+                       value="${yzzcd.CD_price}"/>
             </td>
         </tr>
         <tr>
-            <td>销售额</td>
+            <td>是否售罄</td>
             <td>
-                <input type="text" name="ctsale"
-                       value="${yzzct.CT_sale}"/>
+                <input type="text" name="cdtype"
+                       value="${yzzcd.CD_type}"/>
             </td>
         </tr>
         <tr>
