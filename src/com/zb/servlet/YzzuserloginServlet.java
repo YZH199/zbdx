@@ -30,8 +30,7 @@ public class YzzuserloginServlet extends HttpServlet {
                     response.sendRedirect(""+request.getContextPath()+"/CTlistServlet");
                 }
                 if(yzzuser1.getType().equals("学生")){
-                request.setAttribute("yzzuser1",yzzuser1);
-                request.getRequestDispatcher("/Yzzstudent.jsp").forward(request,response);
+                    response.sendRedirect(""+request.getContextPath()+"/YzzstudentlistServlet");
                 }
             }else{
             response.sendRedirect(""+request.getContextPath()+"/Yzzfaild.jsp");
