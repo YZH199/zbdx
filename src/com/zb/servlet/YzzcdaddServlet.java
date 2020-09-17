@@ -26,10 +26,5 @@ public class YzzcdaddServlet extends HttpServlet {
         YzzuserDao yzzuserDao=new YzzuserDao();
         yzzuserDao.cdadd(yzzcd);
         response.sendRedirect(""+request.getContextPath()+"/YzzCDlistServlet");
-
-
-
-
-
     }
 }
